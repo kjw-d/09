@@ -4,20 +4,16 @@
 
 int main(void)
 {
-   int i, average;
-   int sum;
-   int grade[SIZE];
+   int i;
+   int a[SIZE] = {1, 2, 3, 4, 5};
+   int b[SIZE] = {1, 2, 3, 6, 5};
+   int flag_same = 1;
 
-   sum = 0;
-    for(i=0; i<SIZE; i++)
-    {
-        printf("학생 성적을 입력하세요: ");
-        scanf("%d", &grade[i]);
-        sum += grade[i];
-    }
-        
-    average = sum / SIZE;
-    printf("성적 평균: %d\n", average);
-    
+   for(i=0;i<SIZE;i++)
+   {
+        if(a[i] != b[i])
+            printf("Index %i different!\n", i); 
+   }
+
     return 0;
 }
